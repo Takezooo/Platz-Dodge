@@ -10,6 +10,8 @@
 - We took some snippets from both of the games and redesign it.
 - Expect the finished project on January.
 
+![image](https://user-images.githubusercontent.com/89834374/142757720-d52b5e41-3fc9-4529-be14-c7f1ede5649b.png)
+
 # Reminder: 
 _**If you want to run the code make sure you already have installed raylib**_
 
