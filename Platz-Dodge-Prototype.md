@@ -1,6 +1,6 @@
 # Platz-Dodge-Prototype
 
-**A prototype; **
+**A prototype**; 
 
 **Not playable;**
 
