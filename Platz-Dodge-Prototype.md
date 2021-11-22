@@ -39,3 +39,7 @@ _**If you want to run the code make sure you already have installed raylib**_
 - Credits to accodius for background and foreground assets
 - Link: https://accodius.itch.io/milky-way?download
 - https://www.raylib.com/index.html
+
+
+# Contributors:
+- Masayuki R. Retuerma (https://github.com/ImYokaii)
