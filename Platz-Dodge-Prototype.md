@@ -43,3 +43,4 @@ _**If you want to run the code make sure you already have installed raylib**_
 
 # Contributors:
 - Masayuki R. Retuerma (https://github.com/ImYokaii)
+- Arsenic M. Salangsang (https://github.com/arsenicsalangsang)
