@@ -37,7 +37,7 @@ _**If you want to run the code make sure you already have installed raylib**_
 - Credits to accodius for background and foreground assets
 - Link: https://accodius.itch.io/milky-way?download
 - https://www.raylib.com/index.html
-- Game over sound: https://www.youtube.com/watch?v=s5B188EFlvE
+- Game over sound: https://www.youtube.com/watch?v=s5B188EFlvE + https://www.youtube.com/watch?v=qekOdNY7UvA
 
 # Contributors:
 - Yuki
