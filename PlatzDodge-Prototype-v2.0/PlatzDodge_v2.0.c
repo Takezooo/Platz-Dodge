@@ -8,7 +8,7 @@
 // Types and Structures Definition
 //----------------------------------------------------------------------------------
 typedef enum { FIRST = 0 } EnemyWave;
-typedef enum { TITLE = 0, GAMEPLAY, ENDING } GameScreen;
+typedef enum { TITLE = 0, GAMEPLAY, ENDING} GameScreen;
 
 typedef struct Player
 {
@@ -48,6 +48,8 @@ Texture2D title;
 Texture2D playBtn;
 Texture2D gameover;
 Sound crash;
+Sound intro;
+Sound ingame;
 
 //------------------------------------------------------------------------------------
 
@@ -82,6 +84,8 @@ int main()
     InitWindow(screenWidth, screenHeight, "Platz Dodge"); // Init window
     InitAudioDevice(); // Initialize audio device and context
     crash = LoadSound("Resources/PlatzDodge Prototype_CrashFx.ogg"); // Load sound from file
+    intro =  LoadSound("Resources/PlatzDodge-Prototype-v2.0_Resources_Intro background music.wav"); // Load sound from file
+    ingame =  LoadSound("Resources/While ingame bg music.wav");
     font = LoadFont("Resources/gbb__.ttf");
     playerSprite = LoadTexture("Resources/player.png"); //to fecth the sprite for player
     enemySprite = LoadTexture("Resources/enemy.png"); //to fecth the sprite for enemy
@@ -90,13 +94,13 @@ int main()
     title = LoadTexture("Resources/Game Title 01.png"); // Load title texture
     playBtn= LoadTexture("Resources/Play Button 02.png"); // Load button texture
     gameover = LoadTexture("Resources/Game Over Purple 01.png"); // Load gameover texture
-
-    //----------------------------------------------------------------------------------
     Image icon = LoadImage("Resources/PlatzDodgeLogoNoBG.png");
+    //----------------------------------------------------------------------------------
     SetWindowIcon(icon);
-
     InitGame();
 
+    SetSoundVolume(intro, 0.5f);  // set volume for intro
+    SetSoundVolume(crash, 0.2f);  // set volume for gameover
     SetTargetFPS(60);   // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 
@@ -113,6 +117,9 @@ int main()
     UnloadTexture(bg);
     UnloadTexture(fg);
     UnloadFont(font);
+    UnloadSound(crash);
+    UnloadSound(intro);
+    UnloadSound(ingame);
     CloseAudioDevice();     // Close the audio device and context
     CloseWindow();              // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
@@ -162,6 +169,11 @@ void UpdateDrawFrame(void)
     {
     case TITLE:
     {
+        if(!IsSoundPlaying(intro))
+        {
+            PlaySound(intro);
+        }
+
         // Mountain scrolling
         scrollingFore -= 5;
         if (scrollingFore <= -screenWidth) scrollingFore = 0;
@@ -170,6 +182,11 @@ void UpdateDrawFrame(void)
     break;
     case GAMEPLAY:
     {
+        StopSound(intro);
+
+        if(!IsSoundPlaying(ingame)){
+            PlaySound(ingame);
+        }
         // Background scrolling logic
         scrollingBack -= 0.5f;
         if (scrollingBack <= -screenWidth) scrollingBack = 0;
@@ -259,15 +276,14 @@ void UpdateDrawFrame(void)
     break;
     case ENDING:
     {
-        if(!IsSoundPlaying(crash))
-        {
+        StopSound(ingame);
             if (IsKeyPressed(KEY_ENTER))
             {
                 InitGame();
                 currentScreen = GAMEPLAY;
+                StopSound(crash);
                 distance = 0;
             }
-        }
     }
     break;
     default:
