@@ -38,3 +38,9 @@ _**If you want to run the code make sure you already have installed raylib**_
 - Link: https://accodius.itch.io/milky-way?download
 - https://www.raylib.com/index.html
 - Game over sound: https://www.youtube.com/watch?v=s5B188EFlvE
+
+# Contributors:
+- Yuki
+- Azerux
+- Angge
+- E#33
