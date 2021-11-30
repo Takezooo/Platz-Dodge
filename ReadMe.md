@@ -4,14 +4,14 @@
 - We took some snippets from both of the games and redesign it.
 
 # Title Screen
-![image](https://user-images.githubusercontent.com/89834374/143984419-5affca07-9758-4b0c-95d3-9584bad8bc84.png)
+![image](https://user-images.githubusercontent.com/89834374/144072339-29de3ae6-fd0d-4e21-b777-eaaeebc41034.png)
 
 # Gameplay Screen
 ![image](https://user-images.githubusercontent.com/89834374/143984487-a97e23b1-96c6-41da-9c71-78dd8e46c66a.png)
 ![image](https://user-images.githubusercontent.com/89834374/143984525-95df38ee-9791-480f-95d6-2cb5888f3650.png)
 
 # Ending Screen
-![image](https://user-images.githubusercontent.com/89834374/143984565-43d23a01-766d-4e19-8d8a-76c3c8d4c304.png)
+![image](https://user-images.githubusercontent.com/89834374/144072406-745f8c4c-1871-4140-919d-57b738637052.png)
 
 # Reminder: 
 _**If you want to run the code make sure you already have installed raylib**_
