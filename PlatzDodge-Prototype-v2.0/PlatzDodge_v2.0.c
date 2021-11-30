@@ -46,6 +46,8 @@ Texture2D bg ;
 Texture2D fg;
 Texture2D title;
 Texture2D playBtn;
+Texture2D retryBtn;
+Texture2D quitBtn;
 Texture2D gameover;
 Sound crash;
 Sound intro;
@@ -92,7 +94,9 @@ int main()
     bg = LoadTexture("Resources/background.png"); //to fecth the background
     fg = LoadTexture("Resources/mountains.png");
     title = LoadTexture("Resources/Game Title 01.png"); // Load title texture
-    playBtn= LoadTexture("Resources/Play Button 02.png"); // Load button texture
+    playBtn= LoadTexture("Resources/Play Button.png"); // Load button texture
+    retryBtn= LoadTexture("Resources/Try Again Button.png"); // Load button texture
+    quitBtn= LoadTexture("Resources/Quit Button.png"); // Load button texture
     gameover = LoadTexture("Resources/Game Over Purple 01.png"); // Load gameover texture
     Image icon = LoadImage("Resources/PlatzDodgeLogoNoBG.png");
     //----------------------------------------------------------------------------------
@@ -116,6 +120,9 @@ int main()
     UnloadTexture(enemySprite);
     UnloadTexture(bg);
     UnloadTexture(fg);
+    UnloadTexture(playBtn);
+    UnloadTexture(quitBtn);
+    UnloadTexture(retryBtn);
     UnloadFont(font);
     UnloadSound(crash);
     UnloadSound(intro);
@@ -276,14 +283,7 @@ void UpdateDrawFrame(void)
     break;
     case ENDING:
     {
-        StopSound(ingame);
-            if (IsKeyPressed(KEY_ENTER))
-            {
-                InitGame();
-                currentScreen = GAMEPLAY;
-                StopSound(crash);
-                distance = 0;
-            }
+
     }
     break;
     default:
@@ -316,32 +316,47 @@ void UpdateDrawFrame(void)
 
     Vector2 mousePoint = { 0.0f, 0.0f };
 
-    // Define frame rectangle for drawing
-    Rectangle sourceRec = { 0, 0, (float)playBtn.width, (float)playBtn.height };
+    // Define frame rectangle for drawing (play button)
+    Rectangle playSourceRec = { 0, 0, (float)playBtn.width, (float)playBtn.height };
 
     // Define play button bounds on screen
-    Rectangle playBtnBounds = { 582, 400, (float)playBtn.width, (float)playBtn.height };
+    Rectangle playBtnBounds = { 575, 430, (float)playBtn.width, (float)playBtn.height };
+
+    // Define frame rectangle for drawing (retry button)
+    Rectangle retrySourceRec = { 0, 0, (float)retryBtn.width, (float)retryBtn.height };
+
+    // Define retry button bounds on screen
+    Rectangle retryBtnBounds = { 430, 500, (float)retryBtn.width, (float)retryBtn.height };
+
+    // Define frame rectangle for drawing (quit button)
+    Rectangle quitSourceRec = { 0, 0, (float)quitBtn.width, (float)quitBtn.height };
+
+    // Define quit button bounds on screen
+    Rectangle quitBtnBounds = { 700, 500, (float)quitBtn.width, (float)quitBtn.height };
 
     bool playBtnAction = false;         // Button action should be activated
+    bool retryBtnAction = false;         // Button action should be activated
+    bool quitBtnAction = false;         // Button action should be activated
 
+    mousePoint = GetMousePosition();
     switch (currentScreen)
     {
+    //----------------------------------------------------------------------------------
     case TITLE:
     {
-        mousePoint = GetMousePosition();
+
         DrawTexture(title, 443, 100, WHITE);
-        DrawTextureRec(playBtn, sourceRec, (Vector2)
+        DrawTextureRec(playBtn, playSourceRec, (Vector2)
         {
             playBtnBounds.x, playBtnBounds.y
-        }, WHITE); // Draw button frame
-        // Check button state
-        if (CheckCollisionPointRec(mousePoint, playBtnBounds)) //Change screen when the button is clicked
+        }, WHITE); // Draw button frame (play button)
+        if (CheckCollisionPointRec(mousePoint, playBtnBounds))
         {
-            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) currentScreen = GAMEPLAY;
+            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) currentScreen = GAMEPLAY; //Change screen when the play button is clicked
         }
-
     }
     break;
+    //----------------------------------------------------------------------------------
     case GAMEPLAY:
     {
         DrawTexture(playerSprite, player.rec.x, player.rec.y, WHITE);
@@ -363,26 +378,50 @@ void UpdateDrawFrame(void)
 
     }
     break;
+    //----------------------------------------------------------------------------------
     case ENDING:
     {
+        StopSound(ingame);
         DrawTextEx(font, TextFormat("DISTANCE: %04i", (int)distance), (Vector2)
         {
-            420, 380
+            520, 400
         }, 30, 3, YELLOW);
         DrawTextEx(font, TextFormat("LONGEST DISTANCE: %04i", (int)hidistance), (Vector2)
         {
-            420, 430
+            450, 450
         }, 30, 3, YELLOW);
 
-        DrawTexture(gameover, 400, 100, WHITE);
+        DrawTexture(gameover, 285, 20, WHITE);
+        //----------------------------------------------------------------------------------
+        DrawTextureRec(retryBtn, retrySourceRec, (Vector2)
+        {
+            retryBtnBounds.x, retryBtnBounds.y
+        }, WHITE); // Draw button frame (retry button)
 
-        //DrawText("PRESS [ENTER] TO PLAY AGAIN", 420, GetScreenHeight()/2 - 50, 30, WHITE);
+        if (CheckCollisionPointRec(mousePoint, retryBtnBounds))
+        {
+            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){ //Change screen when the retry button is clicked
+                InitGame();
+                currentScreen = GAMEPLAY;
+                StopSound(crash);
+                distance = 0;
+            }
+        }
+        //----------------------------------------------------------------------------------
+        DrawTextureRec(quitBtn, quitSourceRec, (Vector2)
+        {
+            quitBtnBounds.x, quitBtnBounds.y
+        }, WHITE); // Draw button frame (quit button)
+        if (CheckCollisionPointRec(mousePoint, quitBtnBounds))
+        {
+            if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) CloseWindow();  //Change screen when the quit button is clicked
+        }
     }
     break;
+    //----------------------------------------------------------------------------------
     default:
         break;
     }
 
     EndDrawing();
-    //----------------------------------------------------------------------------------
 }
