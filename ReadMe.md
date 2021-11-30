@@ -1,6 +1,6 @@
 # Platz-Dodge-Prototype
 
-- It's a horizontal endless dodging game inspired by raylib game examples Space Invaders and Dr. turtle & Mr. gamera. You can download and play it, just make sure that you have raylib installed on your computer.
+- It's a horizontal endless dodging game inspired by raylib game examples Space Invaders and Dr. turtle & Mr. gamera. You can download and play it, if you want to run the code just make sure that you have raylib installed on your computer.
 - We took some snippets from both of the games and redesign it.
 
 # Title Screen
