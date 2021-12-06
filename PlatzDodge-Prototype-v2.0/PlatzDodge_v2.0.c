@@ -1,13 +1,12 @@
 #include "raylib.h"
 
 //----------------------------------------------------------------------------------
-#define NUM_MAX_ENEMIES 50
+#define NUM_MAX_ENEMIES 10
 #define WAVE 20
 //----------------------------------------------------------------------------------
 
 // Types and Structures Definition
 //----------------------------------------------------------------------------------
-typedef enum { FIRST = 0 } EnemyWave;
 typedef enum { TITLE = 0, GAMEPLAY, ENDING} GameScreen;
 
 typedef struct Player
