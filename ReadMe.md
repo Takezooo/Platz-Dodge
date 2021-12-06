@@ -31,13 +31,14 @@ _**If you want to run the code make sure you already have installed raylib**_
 - Ending Screen (Game over sound, game over display, your score and highscore, try again button, quit button)
 - Changed Background Music
 
-# Sources & Credits: 
 - Credits to nexisgames for player and enemy sprites 
 - Link: https://nexisgames.itch.io/spaceships
 - Credits to accodius for background and foreground assets
 - Link: https://accodius.itch.io/milky-way?download
 - https://www.raylib.com/index.html
 - Game over sound: https://www.youtube.com/watch?v=s5B188EFlvE + https://www.youtube.com/watch?v=qekOdNY7UvA
+- Title screen sound: https://www.youtube.com/watch?v=ShK_Tj-Ee3Y&list=PLpJl5XaLHtLX-pDk4kctGxtF4nq6BIyjg&index=27
+- Gameplay screen sound: https://www.youtube.com/watch?v=uDOirtr2Mj4&list=PLpJl5XaLHtLViI9GmM1qUOVvoKhkqudsY&index=25
 
 # Contributors:
 - Yuki
