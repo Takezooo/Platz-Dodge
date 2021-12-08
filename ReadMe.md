@@ -37,6 +37,7 @@ _**If you want to run the code make sure you already have installed raylib**_
 - Ending Screen (Game over sound, game over display, your score and highscore, try again button, quit button)
 - Changed Background Music
 
+# Sources/ Credits:
 - Credits to nexisgames for player and enemy sprites 
 - Link: https://nexisgames.itch.io/spaceships
 - Credits to accodius for background and foreground assets
