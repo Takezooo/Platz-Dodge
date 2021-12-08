@@ -44,8 +44,8 @@ _**If you want to run the code make sure you already have installed raylib**_
 - Link: https://accodius.itch.io/milky-way?download
 - https://www.raylib.com/index.html
 - Game over sound: https://www.youtube.com/watch?v=s5B188EFlvE + https://www.youtube.com/watch?v=qekOdNY7UvA
-- Title screen sound: https://www.youtube.com/watch?v=ShK_Tj-Ee3Y&list=PLpJl5XaLHtLX-pDk4kctGxtF4nq6BIyjg&index=27
-- Gameplay screen sound: https://www.youtube.com/watch?v=uDOirtr2Mj4&list=PLpJl5XaLHtLViI9GmM1qUOVvoKhkqudsY&index=25
+- Title screen sound by Toby Fox (Uploaded on YT by: Misaki): https://www.youtube.com/watch?v=ShK_Tj-Ee3Y&list=PLpJl5XaLHtLX-pDk4kctGxtF4nq6BIyjg&index=27
+- Gameplay screen sound by Toby Fox (Uploaded on YT by: Misaki): https://www.youtube.com/watch?v=uDOirtr2Mj4&list=PLpJl5XaLHtLViI9GmM1qUOVvoKhkqudsY&index=25
 - Font: https://www.dafont.com/gb-boot.font 
 
 # Developers:
