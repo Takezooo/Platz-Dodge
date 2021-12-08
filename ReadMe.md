@@ -1,4 +1,10 @@
+Game developed by Dave Jornales, Masayuki Retuerma, Angelene Balais, Cleo Alcanzo, and Arsenic Salangsang
+
+Copyright (c) 2021 Dave Jornales (@AkagamiDeibu)
+
 # Platz-Dodge
+
+This document serves as a game report for the video game Platz Dodge. It contains descriptions of the main components that are used within the game. The game does not involve money and is not for sale, rather it is a pre-requisite of the requirements in our Computer Programming Class.
 
 - It's a horizontal endless dodging game inspired by raylib game examples Space Invaders and Dr. turtle & Mr. gamera. You can download and play it, if you want to run the code just make sure that you have raylib installed on your computer.
 - We took some snippets from both of the games and redesign it.
