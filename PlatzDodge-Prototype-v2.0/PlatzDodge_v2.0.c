@@ -1,7 +1,6 @@
 /*******************************************************************************************
 *
-*   This document serves as a game report for the video game Platz Dodge. It contains descriptions of the main components 
-*	that are used within the game. The game does not involve money and is not for sale, rather it is a pre-requisite of the 
+*   The game does not involve money and is not for sale, rather it is a pre-requisite of the 
 *	requirements in our Computer Programming Class.
 *
 *   Game developed by Dave Jornales, Masayuki Retuerma, Angelene Balais, Cleo Alcanzo, and Arsenic Salangsang
