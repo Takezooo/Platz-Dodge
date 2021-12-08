@@ -22,7 +22,7 @@ This document serves as a game report for the video game Platz Dodge. It contain
 # Reminder: 
 _**If you want to run the code make sure you already have installed raylib**_
 
-# Features:
+# Features & Mechanics:
 - Can dodge (UP & DOWN/ W & S)
 - Score based on distance travalled
 - Scrolling background & foreground
@@ -47,8 +47,9 @@ _**If you want to run the code make sure you already have installed raylib**_
 - Gameplay screen sound: https://www.youtube.com/watch?v=uDOirtr2Mj4&list=PLpJl5XaLHtLViI9GmM1qUOVvoKhkqudsY&index=25
 - Font: https://www.dafont.com/gb-boot.font 
 
-# Contributors:
-- Yuki
-- Azerux
-- Angge
-- E#33
+# Developers:
+- Dave D. Jornales
+- Masayuki Retuerma
+- Mary Angelene Balais
+- Cleo Alcanzo
+- Arsenic Salangsang
