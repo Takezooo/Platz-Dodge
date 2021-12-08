@@ -119,6 +119,7 @@ int main()
     UnloadTexture(enemySprite);
     UnloadTexture(bg);
     UnloadTexture(fg);
+    UnloadTexture(title);
     UnloadTexture(playBtn);
     UnloadTexture(quitBtn);
     UnloadTexture(retryBtn);
