@@ -134,6 +134,7 @@ int main()
     UnloadTexture(playBtn);
     UnloadTexture(quitBtn);
     UnloadTexture(retryBtn);
+    UnloadTexture(gameover);
     UnloadFont(font);
     UnloadSound(crash);
     UnloadSound(intro);
