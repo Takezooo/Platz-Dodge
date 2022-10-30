@@ -1,6 +1,6 @@
 Game developed by Dave Jornales, Masayuki Retuerma, Angelene Balais, Cleo Alcanzo, and Arsenic Salangsang
 
-Copyright (c) 2021 Dave Jornales (@AkagamiDeibu)
+Copyright (c) 2021 Dave Jornales (@Takezooo)
 
 # Platz-Dodge
 
